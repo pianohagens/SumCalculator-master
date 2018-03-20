@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -89,6 +91,24 @@ public class MainActivity extends Activity  {
 
         startActivity(intent);
 
+    }
+    //get my aeight menu from justmenu.xml
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.justmenu, menu);
+        return true;
+    }
+
+    public boolean onCreateOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.aeight:
+                startActivity(new Intent(getApplicationContext(),
+                        A8_SettingsActivity.class));
+                return true;
+
+            default:
+                return super.onContextItemSelected(item);
+        }
     }
 
 }

@@ -17,6 +17,7 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.List;
@@ -218,7 +219,11 @@ public class A8_SettingsActivity extends PreferenceActivity {
                 startActivity(new Intent(getActivity(), A8_SettingsActivity.class));
                 return true;
             }
+
+
             return super.onOptionsItemSelected(item);
+
+
         }
     }
 
@@ -250,5 +255,8 @@ public class A8_SettingsActivity extends PreferenceActivity {
             }
             return super.onOptionsItemSelected(item);
         }
+
     }
+
+
 }
